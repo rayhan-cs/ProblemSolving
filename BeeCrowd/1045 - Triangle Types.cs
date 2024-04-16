@@ -20,10 +20,6 @@ class URI
 
         for (int j = 0; j < numbers.Length - 2; j++)
         {
-            if (numbers[j] >= numbers[j + 1] + numbers[j + 2])
-            {
-                Console.WriteLine("NAO FORMA TRIANGULO");
-            }
             if ((numbers[j] * numbers[j]) == (numbers[j + 1] * numbers[j + 1]) + (numbers[j + 2] * numbers[j + 2]))
             {
                 Console.WriteLine("TRIANGULO RETANGULO");
@@ -36,7 +32,7 @@ class URI
             {
                 Console.WriteLine("TRIANGULO ACUTANGULO");
             }
-            if (numbers[j] == numbers[j + 1] && numbers[j] == numbers[j + 2])
+            if (numbers[j] == numbers[j + 1] && numbers[j + 1] == numbers[j + 2])
             {
                 Console.WriteLine("TRIANGULO EQUILATERO");
             }
@@ -47,6 +43,10 @@ class URI
             if (numbers[j] == numbers[j + 2] && numbers[j + 2] != numbers[j + 1])
             {
                 Console.WriteLine("TRIANGULO ISOSCELES");
+            }
+            if (numbers[j] >= numbers[j + 1] + numbers[j + 2])
+            {
+                Console.WriteLine("NAO FORMA TRIANGULO");
             }
         }
 
