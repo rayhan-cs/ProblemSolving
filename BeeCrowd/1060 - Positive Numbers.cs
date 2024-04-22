@@ -6,18 +6,22 @@ class URI
     static void Main(string[] args)
     {
 
-        var number = 0;
-        var line = Console.ReadLine();
-        string[] lineParts = line.Split(' ');
+        double[] numbers = new double[6];
+        var positiveCount = 0;
 
-        foreach (string part in lineParts)
+        for (int i = 0; i < 6; i++)
         {
-            if ((Convert.ToDouble(part) >= 1))
+            if (double.TryParse(Console.ReadLine(), out numbers[i]))
             {
-                number++;
+                if (numbers[i] > 0)
+                {
+                    positiveCount++;
+                }
+
             }
         }
-        Console.WriteLine(number + " valores positivos");
+
+        Console.WriteLine(positiveCount + " valores positivos");
 
     }
 
